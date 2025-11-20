@@ -1,0 +1,8 @@
+{
+  "name": "J.A.R.V.I.S. AR Interface",
+  "description": "Immersive Augmented Reality HUD with gesture-controlled holographic globe and biometric tracking.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
