@@ -3,33 +3,17 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { AppMode } from '../types';
 
-// Augment JSX namespace to include Three.js elements
+// Fix for missing JSX types
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      ambientLight: any;
-      pointLight: any;
       group: any;
       mesh: any;
       planeGeometry: any;
-      boxGeometry: any;
       meshStandardMaterial: any;
-      meshBasicMaterial: any;
-    }
-  }
-}
-
-// Double declaration to ensure React module augmentation works in all environments
-declare module 'react' {
-  namespace JSX {
-    interface IntrinsicElements {
+      boxGeometry: any;
       ambientLight: any;
       pointLight: any;
-      group: any;
-      mesh: any;
-      planeGeometry: any;
-      boxGeometry: any;
-      meshStandardMaterial: any;
       meshBasicMaterial: any;
     }
   }

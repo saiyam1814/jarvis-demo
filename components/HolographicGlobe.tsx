@@ -4,12 +4,10 @@ import * as THREE from 'three';
 import { HandGestureState, GestureType, CityData } from '../types';
 import { soundService } from '../services/soundService';
 
-// Augment JSX namespace to include Three.js elements
+// Fix for missing JSX types
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      ambientLight: any;
-      pointLight: any;
       group: any;
       mesh: any;
       sphereGeometry: any;
@@ -17,22 +15,8 @@ declare global {
       planeGeometry: any;
       shaderMaterial: any;
       gridHelper: any;
-    }
-  }
-}
-
-declare module 'react' {
-  namespace JSX {
-    interface IntrinsicElements {
       ambientLight: any;
       pointLight: any;
-      group: any;
-      mesh: any;
-      sphereGeometry: any;
-      meshBasicMaterial: any;
-      planeGeometry: any;
-      shaderMaterial: any;
-      gridHelper: any;
     }
   }
 }
